@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  color: #E49869;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 200; /* Thin */
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0.5em 0;
+}
+
+p {
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+a {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+a:hover {
+  border-color: #E49869;
+}
+
+@media only screen and (min-width: 64rem) {
+  h2 {
+    font-size: 4em;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #482D27;
+  padding: 5%;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  background-color: #573A35;
+  margin: 0;
+  padding: 1em;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
