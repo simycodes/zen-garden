@@ -1,14 +1,13 @@
 @use "variables" as *; //this puts all the variables in the global namespace.
 @use 'atoms';
-//@use 'molecules';
+@use 'molecules';
 //@use 'organisms' as o;
 
 * {
   box-sizing: border-box;
 }
 html {
-  background-color: $background-color;
-  padding: 5%;
+  // padding: 5%;
 }
 
 body {
@@ -17,7 +16,7 @@ body {
   color: $text-light;
   background-color: $primary;
   margin: 0;
-  padding: 1em;
+  padding: 0;
 }
 
 abbr[title] {

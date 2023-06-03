@@ -1,3 +1,35 @@
 .intro {
   padding: 4%;
 }
+
+/* MAIN SECTION STYLES */
+.main {
+  width: 280px;
+  margin: .5rem;
+}
+
+.sidebar {
+  width: 280px;
+  margin: .5rem
+}
+
+/* MEDIUM SCREEN 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 40em) {
+  /* MAIN SECTION STYLES */
+  .main {
+    width: auto;
+    margin: .5rem;
+  }
+
+  .sidebar {
+    width: auto;
+    margin: .5rem
+  }
+}
+
+/*LARGE SCREEN 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 64rem) {
+    h2 {
+      font-size: 4em;
+    }
+}

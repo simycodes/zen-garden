@@ -7,25 +7,221 @@
 // make any modifications on the elements if they need to appear differently in a certain 
 // molecule (block)
 
-[role="banner"] {
-  > h1 {
-    // notice we have to reference the 'atoms' namespace to find our mixins.
-    @include atoms.uppercase($text-light);
-  }
+.page-wrapper {
+  display: block;
 }
+
+/* INRO-BANNER STYLES */
+.intro {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+header {
+  grid-column: 1;
+  grid-row: 1 / 2;
+  min-height: 80vh;
+  width: 100%;
+  background: url("./images/banner5.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+header h1 {
+  margin-left: -.5rem;
+}
+
+header h2 {
+  width: 280px;
+  color: #44210B;
+  font-size: 60px;
+  margin-top: .5rem;
+  margin-left: .5rem;
+  margin-bottom: -2rem;
+  line-height: 80px;
+}
+
 .summary {
-  @include atoms.uppercase($text-light);
-  padding: 15% 0;
-  p:last-child {
-    @include atoms.divider;
-  }
-  a {
-    color: $text-light; //in this case the link wants to be light instead of the default dark
-  }
+  grid-column: 1;
+  grid-row: 1 / 2;
+  display: flex;
+  color: #EEEEEE;
+  font-size: 17px;
+  margin-top: 12rem;
+  margin-left: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  // border: 2px solid red;
 }
+
+.summary p:nth-child(1) {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.summary p:nth-child(2) {
+  margin-right: 5rem;
+}
+
+.summary a {
+  color: #5a2504fa;
+}
+
 .preamble {
-  background: rgba(255, 255, 255, 0.9);
-  color: $text-light;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
+  grid-column: 1;
+  grid-row: 3 / 4;
+  width: 280px;
+  margin: .5rem
 }
+
+.preamble h3 {
+
+}
+
+.preamble p:nth-child(1) {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
+
+.preamble p:nth-child(2) {
+  
+}
+
+.preamble p:nth-child(3) {
+  
+}
+
+/* MAIN SECTION STYLES */
+
+
+/* MEDIUM SCREEN 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 40em) {
+  .page-wrapper {
+    width: 100%;
+    display: block;
+  }
+
+  /* INRO-BANNER STYLES */
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    // border: 2px solid red;
+  }
+
+  header {
+    grid-column: 1;
+    grid-row: 1 / 2;
+    min-height: 90vh;
+    width: 100%;
+    background: url("./images/banner1.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header h1 {
+    color: #C7B8B8;
+    margin-bottom: 15rem;
+    margin-left: 17rem;
+    // border: 2px solid red;
+  }
+
+  header h2 {
+    width: auto;
+    color: #44210B;
+  }
+
+  .summary {
+    width: auto;
+    grid-column: 1;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .summary {
+    color: #EEEEEE;
+    font-size: 17px;
+  }
+
+  .summary p:nth-child(1) {
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 28rem;
+    margin-top: -3rem;
+    margin-left: 35rem;
+  }
+
+  .summary p:nth-child(2) {
+    margin-left: 29.5rem;
+  }
+
+  .summary a {
+    color:#EEEEEE;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .preamble {
+    width: auto;
+    grid-column: 1;
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .preamble h3 {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .preamble p:nth-child(1) {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .preamble p:nth-child(2) {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+  }
+
+  .preamble p:nth-child(3) {
+    grid-column: 2 / -1;
+    grid-row: 3 / -1;
+  }
+
+}
+
+/*LARGE SCREEN 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 64rem) {
+   
+}
+
+// [role="banner"] {
+//   > h1 {
+//     // notice we have to reference the 'atoms' namespace to find our mixins.
+//     @include atoms.uppercase($text-light);
+//   }
+// }
+// .summary {
+//   @include atoms.uppercase($text-light);
+//   padding: 15% 0;
+//   p:last-child {
+//     @include atoms.divider;
+//   }
+//   a {
+//     color: $text-light; //in this case the link wants to be light instead of the default dark
+//   }
+// }

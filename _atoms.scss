@@ -25,7 +25,7 @@
 }
 
 // these styles here should describe how the atoms (elements) should appear most of the time.
-//  They can be overridden at the molecule (block) as necessary
+// They can be overridden at the molecule (block) as necessary
 
 h2,
 h3,
@@ -75,9 +75,16 @@ a {
 }
 
 a:hover {
+  color: #E49869;
   border-color: #E49869;
 }
 
+/* MEDIUM SCREEN 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 40em) {
+
+}
+
+/*LARGE SCREEN 64em is also 1028px (if basefont is 16px) */
 @media only screen and (min-width: 64rem) {
     h2 {
       font-size: 4em;
