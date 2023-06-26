@@ -1,7 +1,7 @@
 @use "variables" as *; //this puts all the variables in the global namespace.
 @use 'atoms';
 @use 'molecules';
-//@use 'organisms' as o;
+@use 'organisms' as o;
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,9 @@ body {
   font-family: $fonts-body;
   font-size: 1.1rem;
   color: $text-light;
-  background-color: $primary;
+  // background-color: $primary;
+  // background-image: repeating-conic-gradient(from 0deg, #482D27 0deg 30deg, #573A35 30deg 60deg);
+  background-image:repeating-radial-gradient(#482D27 0 8%, #573A35 8% 16%);
   margin: 0;
   padding: 0;
 }

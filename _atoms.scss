@@ -48,7 +48,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: bold;
   line-height: 1em;
 }
@@ -70,7 +70,7 @@ p {
 a {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   color: $text-light;
-  text-decoration: none;
+  // text-decoration: none;
   transition: border-color 0.2s ease-in-out;
 }
 

@@ -20,7 +20,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: bold;
   line-height: 1em;
 }
@@ -44,7 +44,6 @@ p {
 a {
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   color: #FFFFFF;
-  text-decoration: none;
   transition: border-color 0.2s ease-in-out;
 }
 
@@ -68,6 +67,7 @@ a:hover {
 .intro {
   display: grid;
   grid-template-columns: 1fr;
+  background-color: #482D27;
 }
 
 header {
@@ -128,6 +128,7 @@ header h2 {
   grid-row: 3/4;
   width: 280px;
   margin: 0.5rem;
+  background-color: #482D27;
 }
 
 .preamble p:nth-child(1) {
@@ -136,22 +137,69 @@ header h2 {
 }
 
 /* MAIN SECTION STYLES */
-/* MEDIUM SCREEN 64em is also 1028px (if basefont is 16px) */
-@media only screen and (min-width: 40em) {
+/* MEDIUM VIEW - 39em is also 560px (if basefont is 16px) */
+@media only screen and (min-width: 39em) {
+  h3 {
+    text-align: center;
+  }
   .page-wrapper {
     width: 100%;
-    display: block;
+    display: grid;
+    grid-template-columns: 12fr 3fr 100px;
   }
-  /* INRO-BANNER STYLES */
+  /* INTRO-BANNER STYLES */
   .intro {
+    grid-column: 1/-1;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
   }
+  aside {
+    grid-column: 2/3;
+    height: 1000px;
+    width: 500px;
+    padding: 15px;
+    background: url("./images/aside.jpg") center/cover no-repeat;
+    border-radius: 10px;
+  }
+  /* MAIN SECTION GRID */
+  .main {
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 75px 12fr 4fr;
+    background-color: #573A35;
+  }
+  .explanation {
+    grid-column: 2/-1;
+    padding: 10px;
+    width: 600px;
+    max-width: 600px;
+  }
+  .participation {
+    grid-column: 2/3;
+    background-color: #482D27;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .benefits {
+    grid-column: 3/4;
+    margin: 10px;
+  }
+  .requirements {
+    grid-column: 2/-1;
+    padding: 10px;
+    background: url("./images/requirements.jpg") center/cover no-repeat;
+  }
+  footer {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+  /* END OF MAIN SECTION GRID */
   header {
     grid-column: 1;
     grid-row: 1/2;
-    min-height: 90vh;
+    min-height: 60vh;
     width: 100%;
     background: url("./images/banner1.jpg") center/cover no-repeat;
     display: flex;
@@ -210,6 +258,27 @@ header h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+  }
+  .preamble h3::before {
+    background-color: white;
+    content: "";
+    height: 5px;
+    width: 260px;
+    position: absolute;
+    left: 50px;
+    top: 65px;
+    border-radius: 5px;
+  }
+  .preamble h3::after {
+    background-color: white;
+    content: "";
+    height: 5px;
+    width: 260px;
+    position: absolute;
+    left: 50px;
+    bottom: 65px;
+    border-radius: 5px;
   }
   .preamble p:nth-child(1) {
     grid-column: 2/-1;
@@ -224,7 +293,58 @@ header h2 {
     grid-row: 3/-1;
   }
 }
+/* LARGE SCREEN - 64em is also 1028px (if base-font is 16px) */
+@media only screen and (min-width: 64rem) {
+  /* INTRO-BANNER STYLES */
+  aside {
+    height: 900px;
+    max-height: 900px;
+  }
+  /* MAIN SECTION GRID */
+  .explanation {
+    width: 850px;
+    max-width: 850px;
+  }
+  header {
+    min-height: 90vh;
+  }
+  .preamble h3::before {
+    height: 7px;
+    width: 360px;
+    top: 55px;
+    left: 29px;
+  }
+  .preamble h3::after {
+    height: 7px;
+    width: 360px;
+    bottom: 55px;
+    left: 29px;
+  }
+}
+/* MAIN SECTION STYLES */
+.main {
+  width: 280px;
+  margin: 0.5rem;
+}
+
+/* MEDIUM SCREEN 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 40em) {
+  /* MAIN SECTION STYLES */
+  .main {
+    width: auto;
+    margin: 0.5rem;
+  }
+  .sidebar {
+    width: auto;
+    margin: 0.5rem;
+  }
+}
 /*LARGE SCREEN 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 64rem) {
+  h2 {
+    font-size: 4em;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -233,7 +353,7 @@ body {
   font-family: "Oswald", sans-serif;
   font-size: 1.1rem;
   color: #FFFFFF;
-  background-color: #573A35;
+  background-image: repeating-radial-gradient(#482D27 0 8%, #573A35 8% 16%);
   margin: 0;
   padding: 0;
 }
