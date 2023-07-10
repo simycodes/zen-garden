@@ -7,21 +7,10 @@
   line-height: $line-height;
 }
 
-@mixin set-flex($direction: row, $wrap: wrap) {
-  display: flex;
-  flex-flow: $direction $wrap;
-}
-
 @mixin uppercase($color: $text-light) {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: $color;
-}
-
-@mixin divider($color: $accent1) {
-  border-top: 1px solid $color;
-  margin-top: 1em;
-  padding-top: 1.5em;
 }
 
 // these styles here should describe how the atoms (elements) should appear most of the time.
@@ -48,9 +37,11 @@ h2 {
 }
 
 h3 {
+  text-align: center;
   font-size: 1.8em;
   font-weight: bold;
   line-height: 1em;
+  margin-top: 10px;
 }
 
 h4 {
@@ -77,16 +68,4 @@ a {
 a:hover {
   color: #E49869;
   border-color: #E49869;
-}
-
-/* MEDIUM SCREEN 64em is also 1028px (if basefont is 16px) */
-@media only screen and (min-width: 40em) {
-
-}
-
-/*LARGE SCREEN 64em is also 1028px (if basefont is 16px) */
-@media only screen and (min-width: 64rem) {
-    h2 {
-      font-size: 4em;
-    }
 }
