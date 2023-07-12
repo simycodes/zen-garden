@@ -232,7 +232,7 @@ abbr[title] {
   
 }
 
-/*LARGE SCREEN 64em is also 1028px (if basefont is 16px) */
+/*LARGE SCREEN 64em is also 1028px (if base-font is 16px) */
 @media only screen and (min-width: 64rem) {
   // ATOMS SECTION
   h2 {
@@ -242,8 +242,8 @@ abbr[title] {
   // MOLECULES SECTION
   /* INTRO-BANNER STYLES */
   aside {
-    height: 900px;
-    max-height: 900px;
+    height: 1002px;
+    padding: 7px;
   }
 
   /* MAIN SECTION GRID */
